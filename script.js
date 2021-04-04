@@ -12,7 +12,6 @@ const requestUrl = 'https://api.solunar.org/solunar/51.481801,-0.010710,20210404
 console.log('running script')
 
 async function fetchCurrentMoonPhase() {
-  let currentPhase;
   const response = await fetch(requestUrl)
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
