@@ -37,13 +37,23 @@ const moonImages = {
 }
 
 fetchCurrentMoonPhase().then((json) => {
-  let currentMoonPhase = json.moonPhase; 
-  let imagePhase = moonImages[currentMoonPhase];
-  let text = document.createElement('p');
-  let image = document.createElement("img");
-  image.src=imagePhase;
+  const currentMoonPhase = json.moonPhase; 
+  const imagePhase = moonImages[currentMoonPhase];
+
+  const text = document.createElement('p');
   text.innerHTML = currentMoonPhase;
-  const targetElement = document.getElementById('moon_phases');
+
+  const headerText = document.createElement('p');
+  headerText.innerHTML = currentMoonPhase;
+
+  const image = document.createElement('img');
+  image.src = imagePhase;
+ 
+  const targetElement = document.getElementById('current_data');
   targetElement.appendChild(text);
   targetElement.appendChild(image);
+
+  const headerElement = document.getElementById('moon_header');
+  headerElement.appendChild(headerText);
+  // headerElement.appendChild(image);
 }).catch(e => console.log(e));

@@ -9,24 +9,62 @@ font-family: 'Abel', sans-serif; */
 
 body{
   padding: 1.3em;
+  background-image: url("paper.jpeg");
+  background-color: #21265E;
+  background-blend-mode: multiply;
+
 }
 h1{
+
   padding: 0.5em;
   text-align: right;
-  border-top: 1pt black solid;
-  border-bottom: 1pt black solid;
+  color: white;
+  border-top: 1pt white solid;
+  border-bottom: 1pt white solid;
   font-family: 'Prata', serif;
+}
+#moon_header{
+  display: inline-block;
+  float: left;
+  font-size: 10px;
 }
 
 h2{
+  color: white;
   font-family:  'Prata', serif;
 }
 
 li{
+  color: white;
   display: inline;
   padding: 0.75em;
 }
+a{
+  color: white;
+}
 
 section{
+  color: white;
   height: 35em;
+}
+
+#moon_phases{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#carosel{
+  width: 50%;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+}
+
+#moon_history{
+  padding: 24px;
+  background-image: url("paper.jpeg");
+  background-color: #48AB97;
+  background-blend-mode: multiply;
+
 }
